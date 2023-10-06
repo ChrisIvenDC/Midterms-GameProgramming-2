@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class BulletScript : MonoBehaviour
 {
+    public GameObject BulletforCol;
     public float life = 3;
     void Awake()
     {
@@ -11,8 +14,14 @@ public class BulletScript : MonoBehaviour
     }
 
 
-    void OnCollisionEnter(Collision collision)
+    
+    void Update()
     {
+
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {   
         Destroy(collision.gameObject);
         Destroy(gameObject);
     }

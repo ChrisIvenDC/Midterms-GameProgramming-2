@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 959224779656034728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.45}
+  m_LocalPosition: {x: 0, y: 0, z: 1.392}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea38e6d204f09804fa845257184ebaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bulletcolor: []
   bulletSpawnPoint: {fileID: 8423284927839660729}
   bulletObj: {fileID: 3928175194662897851, guid: 9aa1a09d13ae70a43aa592667cf1acf8,
     type: 3}

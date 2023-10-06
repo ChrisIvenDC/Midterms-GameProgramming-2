@@ -18,6 +18,53 @@ public class RotationSample : MonoBehaviour
 
     void Update()
     {
+        GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        if (Enemies.Length > 0)
+        {
+            EnemyPos = FindClosestEnemy(Enemies);
+
+            if (Vector3.Distance(transform.position, EnemyPos.position) <= radius)
+            {
+                LookRotate();
+            }
+        }
+    }
+
+    public void LookRotate()
+    {
+        Vector3 Direction = EnemyPos.position - transform.position;
+        Quaternion Rotation = Quaternion.LookRotation(Direction);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Rotation, radius * Time.deltaTime);
+    }
+
+    Transform FindClosestEnemy(GameObject[] Enemies)
+    {
+        Transform ClosestEnemy = null;
+        float ClosestDistance = Mathf.Infinity;
+
+        foreach (GameObject Enemy in Enemies)
+        {
+            float distance = Vector3.Distance(transform.position, Enemy.transform.position);
+
+            if (distance < ClosestDistance)
+            {
+                ClosestDistance = distance;
+                ClosestEnemy = Enemy.transform;
+            }
+        }
+
+        return ClosestEnemy;
+    }
+}
+
+
+    /*void Update()
+    {
+
+
+
+        
 
 
         float dist = Vector3.Distance(transform.position, EnemyPos.position);
@@ -46,4 +93,4 @@ public class RotationSample : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
-
+*/
