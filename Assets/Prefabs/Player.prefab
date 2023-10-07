@@ -170,11 +170,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea38e6d204f09804fa845257184ebaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulletcolor: []
-  bulletSpawnPoint: {fileID: 8423284927839660729}
-  bulletObj: {fileID: 3928175194662897851, guid: 9aa1a09d13ae70a43aa592667cf1acf8,
-    type: 3}
-  bulletSpeed: 10
+  SpawnBulletHere: {fileID: 0}
+  BulletPrefab: {fileID: 0}
+  Nozzle: {fileID: 0}
+  Player_Color: []
+  BulletSpeed: 0
+  FireRate: 0
 --- !u!1 &7899019411024563192
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,9 +188,10 @@ GameObject:
   - component: {fileID: 5241543883893567872}
   - component: {fileID: 3885465392567363157}
   - component: {fileID: 1888885406156442995}
+  - component: {fileID: 5740032077527836380}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,7 +278,19 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.0629237, y: 1, z: 3.1707618}
+  m_Center: {x: 0.026661716, y: 0, z: -1.0853808}
+--- !u!114 &5740032077527836380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899019411024563192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf85713212ba6c40bfa64af42424743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

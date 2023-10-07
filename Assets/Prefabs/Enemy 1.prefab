@@ -121,4 +121,4 @@ MonoBehaviour:
   EnemyObj: {fileID: 4115653906172381540}
   PlayerObj: {fileID: 5515083776229498923, guid: a2cd17848fbab2c4db0ab3e09659a15f,
     type: 3}
-  Enemyspeed: 0.005
+  Enemyspeed: 0.03
